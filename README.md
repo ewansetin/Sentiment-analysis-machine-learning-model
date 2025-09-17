@@ -59,22 +59,11 @@ Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
 --- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
 Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
 
-| Attempt | #1    | #2    |
-| :---:   | :---: | :---: |
-| Seconds | 301   | 283   |
+| **Attempt** | **#1**    | **#2**    |
+| :---   | :--- | :--- |
+| **Seconds** | 301   | 283   |
 
 First Header  | Second Header
 ------------- | -------------
 Content Cell  | Content Cell
 Content Cell  | Content Cell
-
-<table>
-  <tr>
-    <th style="color: red;">Header 1</th>
-    <th style="background-color: yellow;">Header 2</th>
-  </tr>
-  <tr>
-    <td style="font-weight: bold;">Cell 1</td>
-    <td style="font-style: italic;">Cell 2</td>
-  </tr>
-</table>
