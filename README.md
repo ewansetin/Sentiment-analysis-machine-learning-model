@@ -5,7 +5,7 @@ This project explored sentiment analysis, which detects the emotional tone of te
 
 I built a sentiment-analysis pipeline to compare supervised probabilistic and non-probabilistic classifiers, applying established methods and best practices. The goal was to evaluate model performance and highlight insights that could inform future AI-driven text analytics.
 
-![Screenshot](/assets/images/MLAINLP.png)
+![Screenshot](/assets/Images/MLAINLP.png)
 
 
 ## My Research 
