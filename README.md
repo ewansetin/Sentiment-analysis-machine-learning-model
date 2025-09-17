@@ -53,7 +53,7 @@ Key considerations:
 
 This setup enables a fair comparison of the two modelling approaches and supports meaningful conclusions about their effectiveness in AI-driven sentiment analysis.
 
-## Process 
+## My Design 
 The workflow follows key steps: data collection, data processing, feature extraction, model training, and evaluation. The goal is to identify which classifiers perform best for text-based sentiment classification.
 
 I selected a dataset with textual reviews linked to ratings, providing both input (text) and discrete output (sentiment label). Reviews were chosen for their richness in emotional cues and diversity, helping reduce domain dependence while maintaining enough examples for training (5,000–20,000 instances).
@@ -82,3 +82,82 @@ To fairly evaluate both approaches, we selected two probabilistic classifiers (N
 ### Model Evaluation
 
 Models were assessed using accuracy, precision, recall, F1-score, and confusion matrices. Additional validation included cross-validation and testing on unseen or external data to ensure robust comparisons. This framework allows conclusions about the effectiveness of probabilistic vs. non-probabilistic approaches in AI-driven sentiment analysis.
+
+### Privacy and Ethical Considerations
+
+Working with real user data requires strict attention to privacy, data protection, and ethics. In the UK, the Data Protection Act 2018 (which implements GDPR) sets key rules: data must be collected lawfully and transparently, used only for explicit purposes, stored securely, and kept no longer than necessary.
+
+For this project, only the essential data—text reviews and ratings—was collected. No personal identifiers were stored, and all data was held securely on an external drive and deleted after the research concluded.
+
+We also respected each data source’s Terms of Service. For example, platforms like Facebook prohibit automated scraping without permission. All data gathering methods followed these requirements to ensure the project remained compliant and ethical.
+
+## How I implemented it 
+
+### Software and Hardware
+The sentiment analysis pipeline was implemented in **Jupyter Notebook**. We recommend using a similar environment to run the notebook and CSV files.
+
+**Hardware used:**  
+
+| Component | Specification |
+| --- | --- |
+| Processor | 2.6 GHz 6-Core Intel Core i7 |
+| Graphics | Intel UHD 630 1536 MB |
+| RAM | 16 GB |
+| OS | MacOS Sonoma |
+| Storage | 500 GB |
+
+---
+
+### Data Collection
+Data was collected from **Google Maps reviews**, which provide text (input) and ratings (output) for sentiment classification. Reviews covered diverse domains, such as hospitals, cinemas, airports, and pubs, with a total of ~8,000 reviews. The dataset was split into:
+
+* **Training & testing set** – to train models and evaluate performance  
+* **Unseen dataset** – to test model generalisation  
+
+CSV files were processed using **Pandas**.
+
+---
+
+### Data Processing
+Ratings were converted from a 5-point scale to a 3-point sentiment scale:
+
+* Ratings 1–2 → Negative (-1)  
+* Rating 3 → Neutral (0)  
+* Ratings 4–5 → Positive (1)  
+
+Text processing included:  
+
+* Replacing contractions  
+* Tokenisation  
+* Partial stop-word removal  
+* Lemmatisation and stemming  
+* Lowercasing  
+
+These steps were implemented using **Contractions** and **NLTK**, with functions applied sequentially to preserve effectiveness. Stop-word removal was customised to retain polarity-relevant words like “not”.
+
+---
+
+### Feature Extraction
+We used **Bag-of-Words (BoW)** via `CountVectorizer()` from Scikit-learn to convert text into numerical features for classification.
+
+---
+
+### Classification Models
+Four supervised learning classifiers were applied:  
+
+* **Probabilistic:** Multinomial Naïve Bayes, Logistic Regression  
+* **Non-probabilistic:** Random Forest, Support Vector Machine  
+
+Minimal optimisation was applied to obtain general performance estimates for comparison.
+
+---
+
+### Model Evaluation
+Models were evaluated using:  
+
+* **Metrics:** Accuracy, Precision, Recall, F1-score  
+* **Visualisation:** Confusion matrices  
+* **Validation:** 4:1 train-test split and 5-fold **StratifiedKFold** cross-validation to handle class imbalance  
+* **Unseen data testing:** to assess generalisation  
+
+This methodology ensures a fair comparison of probabilistic and non-probabilistic classifiers for AI-driven sentiment analysis.
