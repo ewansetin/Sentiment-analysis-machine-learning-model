@@ -7,12 +7,6 @@ I built a sentiment-analysis pipeline to compare supervised probabilistic and no
 
 ![Screenshot](/assets/images/MLAINLP.png)
 
-![Screenshot](/assets/images/SAMDLpipelines.png)
-
-![Screenshot](/assets/images/SApipeline.png)
-
-![Screenshot](/assets/images/SSpectrum.png)
-
 
 ## My Research 
 This project evaluates and compares supervised learning classifiers for sentiment analysis—a core area of natural language processing and AI. Drawing on academic and online sources, the review looks at how machine learning methods are applied to text data, focusing on supervised algorithms for classifying sentiment while noting the broader ethical and professional context.
@@ -21,6 +15,8 @@ This project evaluates and compares supervised learning classifiers for sentimen
 
 Social platforms generate huge amounts of unstructured text that reveal user opinions and emotions. Sentiment analysis, or opinion mining, detects the polarity of this text—positive, negative, or neutral—and can also be extended to finer scales or combined with emotion detection for richer insight.
 
+![Screenshot](/assets/images/SSpectrum.png)
+
 Key steps include:
 
 - Data sourcing: from social media, forums, or benchmark datasets such as SST or SemEval.
@@ -28,6 +24,9 @@ Key steps include:
 - Text processing: cleaning and normalising text (tokenising, lemmatising, removing noise) to improve model accuracy.
 
 - Feature extraction: using methods like Bag-of-Words, TF-IDF, and N-grams to turn text into usable numeric features.
+
+
+
 
 ### Modelling Approaches
 
@@ -40,6 +39,10 @@ Three main strategies are common:
 - Deep learning: neural networks (CNNs, RNNs) that learn complex patterns automatically and often deliver the best accuracy.
 
 Hybrid methods can combine these for improved results.
+
+
+![Screenshot](/assets/images/SAMDLpipelines.png)
+
 
 ### Supervised Learning Focus
 
@@ -90,6 +93,8 @@ To fairly evaluate both approaches, we selected two probabilistic classifiers (N
 ### Model Evaluation
 
 Models were assessed using accuracy, precision, recall, F1-score, and confusion matrices. Additional validation included cross-validation and testing on unseen or external data to ensure robust comparisons. This framework allows conclusions about the effectiveness of probabilistic vs. non-probabilistic approaches in AI-driven sentiment analysis.
+
+![Screenshot](/assets/images/SApipeline.png)
 
 ### Privacy and Ethical Considerations
 
