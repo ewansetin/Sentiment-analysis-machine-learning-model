@@ -161,3 +161,50 @@ Models were evaluated using:
 * **Unseen data testing:** to assess generalisation  
 
 This methodology ensures a fair comparison of probabilistic and non-probabilistic classifiers for AI-driven sentiment analysis.
+
+# Results & Discussion
+
+The main goal of this project was to compare the performance of probabilistic and non-probabilistic algorithms for sentiment analysis. We built a sentiment analysis pipeline using best practices identified from our literature review. Overall, the pipeline performed well on the chosen dataset, suggesting that our implementation was effective.
+
+## Challenges
+
+One of the main challenges was **data collection**. We observed an uneven distribution of sentiment classes, particularly a low number of neutral reviews. This likely reflects both the structure of the 5-star rating scale and user behaviour—people are more likely to leave strongly positive or negative reviews than neutral ones. This imbalance created additional complexity when training the models.
+
+## Outcomes
+
+We evaluated the classifiers using both **seen** and **unseen** data, generating metrics such as accuracy, precision, recall, and F1-score. We also applied **k-fold cross-validation** for a more robust assessment.
+
+**Seen data accuracy scores:**  
+- Naïve Bayes: 88%  
+- Logistic Regression: 88%  
+- Random Forest: 85%  
+- Support Vector Machine: 86%  
+
+Results indicate that both probabilistic and non-probabilistic classifiers performed well on balanced data, with probabilistic classifiers slightly outperforming the others.  
+
+**Unseen data accuracy scores:**  
+- Naïve Bayes: 77%  
+- Logistic Regression: 76%  
+- Random Forest: 81%  
+- Support Vector Machine: 82%  
+
+When tested on unseen data, probabilistic classifiers showed a notable drop in performance, while non-probabilistic classifiers maintained higher accuracy. This aligns with research showing probabilistic models are more sensitive to noisy or unbalanced datasets, while non-probabilistic models handle skewed distributions more robustly.
+
+**Conclusion:** Both probabilistic and non-probabilistic algorithms are valid for sentiment analysis, but non-probabilistic models may be preferable for datasets with uneven class distributions.
+
+
+## 6.3 Room for Improvement
+
+While the current pipeline achieved strong results, there are several ways to enhance future work:
+
+* **Larger and more diverse datasets** – Including data from multiple platforms could help reduce domain bias and improve generalisation.  
+* **Balancing techniques** – Applying methods such as SMOTE or class-weight adjustments may address class imbalance and improve neutral sentiment detection.  
+* **Advanced feature extraction** – Incorporating modern techniques like word embeddings (Word2Vec, GloVe) or transformer-based embeddings could capture richer semantic relationships.  
+* **Hyperparameter tuning** – Systematic optimisation of classifier parameters may boost accuracy beyond the baseline results.  
+* **Real-time deployment** – Extending the pipeline into a production-ready application (e.g., a web service or dashboard) would make it more practical for business use.
+
+## Next Steps
+
+Building on these findings, the following actions could guide the next phase of development:
+
+* **Experiment with deep learning models** such as LSTM or transformer-based architectures to explore their performance on sentiment analysis. 
