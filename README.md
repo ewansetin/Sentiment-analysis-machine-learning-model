@@ -59,9 +59,10 @@ Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
 --- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
 Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
 
-| **Attempt** | **#1**    | **#2**    |
+| **Process** | **Description**    | **Example**    |
 | :---   | :--- | :--- |
-| **Seconds** | 301   | 283   |
+| **Seconds** | This process separates combinations of words and replaces them with their standard form, e.g. “can’t” becomes “can not”.   | [Fast machine , but another apple con . Costs you a fortune and you can not do anything. You have to buy apps, which you can get more freely ones on iPhone. I never boaught anything on my iphone. I can do more on my phone for free. Far to expensive! I will return it ASAP.]   |
+
 
 First Header  | Second Header
 ------------- | -------------
