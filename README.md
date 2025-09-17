@@ -5,6 +5,14 @@ This project explored sentiment analysis, which detects the emotional tone of te
 
 I built a sentiment-analysis pipeline to compare supervised probabilistic and non-probabilistic classifiers, applying established methods and best practices. The goal was to evaluate model performance and highlight insights that could inform future AI-driven text analytics.
 
+![Screenshot](/assets/images/MLAINLP.png)
+
+![Screenshot](/assets/images/SAMDLpipelines.png)
+
+![Screenshot](/assets/images/SApipeline.png)
+
+![Screenshot](/assets/images/SSpectrum.png)
+
 
 ## My Research 
 This project evaluates and compares supervised learning classifiers for sentiment analysis—a core area of natural language processing and AI. Drawing on academic and online sources, the review looks at how machine learning methods are applied to text data, focusing on supervised algorithms for classifying sentiment while noting the broader ethical and professional context.
@@ -193,7 +201,7 @@ When tested on unseen data, probabilistic classifiers showed a notable drop in p
 **Conclusion:** Both probabilistic and non-probabilistic algorithms are valid for sentiment analysis, but non-probabilistic models may be preferable for datasets with uneven class distributions.
 
 
-## 6.3 Room for Improvement
+## Room for Improvement
 
 While the current pipeline achieved strong results, there are several ways to enhance future work:
 
