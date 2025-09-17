@@ -15,7 +15,7 @@ This project evaluates and compares supervised learning classifiers for sentimen
 
 Social platforms generate huge amounts of unstructured text that reveal user opinions and emotions. Sentiment analysis, or opinion mining, detects the polarity of this text—positive, negative, or neutral—and can also be extended to finer scales or combined with emotion detection for richer insight.
 
-![Screenshot](/assets/images/SSpectrum.png)
+![Screenshot](/assets/Images/SSpectrum.png)
 
 Key steps include:
 
@@ -41,7 +41,7 @@ Three main strategies are common:
 Hybrid methods can combine these for improved results.
 
 
-![Screenshot](/assets/images/SAMDLpipelines.png)
+![Screenshot](/assets/Images/SAMDLpipelines.png)
 
 
 ### Supervised Learning Focus
@@ -94,7 +94,7 @@ To fairly evaluate both approaches, we selected two probabilistic classifiers (N
 
 Models were assessed using accuracy, precision, recall, F1-score, and confusion matrices. Additional validation included cross-validation and testing on unseen or external data to ensure robust comparisons. This framework allows conclusions about the effectiveness of probabilistic vs. non-probabilistic approaches in AI-driven sentiment analysis.
 
-![Screenshot](/assets/images/SApipeline.png)
+![Screenshot](/assets/Images/SApipeline.png)
 
 ### Privacy and Ethical Considerations
 
