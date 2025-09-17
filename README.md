@@ -55,16 +55,13 @@ This setup enables a fair comparison of the two modelling approaches and support
 
 ## Process 
 
-Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
---- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
-Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
-
 | **Process** | **Description**    | **Example**    |
 | :---   | :--- | :--- |
-| **Seconds** | This process separates combinations of words and replaces them with their standard form, e.g. “can’t” becomes “can not”.   | [Fast machine , but another apple con . Costs you a fortune and you can not do anything. You have to buy apps, which you can get more freely ones on iPhone. I never boaught anything on my iphone. I can do more on my phone for free. Far to expensive! I will return it ASAP.]   |
+| **Replacing contractions** | This process separates combinations of words and replaces them with their standard form, e.g. “can’t” becomes “can not”.   | [Fast machine , but another apple con . Costs you a fortune and you can not do anything. You have to buy apps, which you can get more freely ones on iPhone. I never boaught anything on my iphone. I can do more on my phone for free. Far to expensive! I will return it ASAP.]   |
+| **Tokenisation** | Tokenisation is a process that involves breaking down text into single word named tokens.   | ['Fast', 'machine', ',', 'but', 'another', 'apple', 'con', '.', 'Costs', 'you', 'a', 'fortune', 'and', 'you', 'can', 'not', 'do', 'anything', '.', 'You', 'have', 'to', 'buy', 'apps', ',', 'which', 'you', 'can', 'get', 'more', 'freely', 'ones', 'on', 'iPhone', '.', 'I', 'never', 'boaught', 'anything', 'on', 'my', 'iphone', '.', 'I', 'can', 'do', 'more', 'on', 'my', 'phone', 'for', 'free', '.', 'Far', 'to', 'expensive', '!', 'I', 'will', 'return', 'it', 'ASAP', '.']   |
 
+| **Partial stop-words removal** | This process involves removing stop words such as "the", "of", "and", "a", "to", and "in", but keeping stop words such as “not” and “but”.  | ['Fast', 'machine', ',', 'another', 'apple', 'con', '.', 'Costs', 'fortune', '.', 'buy', 'apps', ',', 'freely', 'ones', 'iPhone', '.', 'never', 'boaught', 'iphone', '.', 'phone', 'free', '.', 'Far', 'expensive', '!', 'return', 'ASAP', '.']   |
 
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+| **Lemmatisation** | Lemmatisation converts words to their base or root form (lemma)  | ['Fast', 'machine', ',', 'another', 'apple', 'con', '.', 'cost', 'fortune', '.', 'buy', 'apps', ',', 'freely', 'one', 'iPhone', '.', 'never', 'boaught', 'iPhone', '.', 'phone', 'free', '.', 'Far', 'expensive', '!', 'return', 'ASAP', '.']   |
+
+| **Stemming** | Stemming involves truncating suffixes to convert words into their root form.  | ['Fast', 'machin', ',', 'anoth', 'appl', 'con', '.', 'cost', 'fortun', '.', 'buy', 'app', ',', 'free', 'one', 'iPhone', '.', 'never', 'boaught', 'iPhone', '.', 'phone', 'free', '.', 'Far', 'expens', '!', 'return', 'ASAP', '.']   |
