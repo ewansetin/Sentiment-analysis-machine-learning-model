@@ -54,6 +54,14 @@ Key considerations:
 This setup enables a fair comparison of the two modelling approaches and supports meaningful conclusions about their effectiveness in AI-driven sentiment analysis.
 
 ## Process 
+The workflow follows key steps: data collection, data processing, feature extraction, model training, and evaluation. The goal is to identify which classifiers perform best for text-based sentiment classification.
+
+I selected a dataset with textual reviews linked to ratings, providing both input (text) and discrete output (sentiment label). Reviews were chosen for their richness in emotional cues and diversity, helping reduce domain dependence while maintaining enough examples for training (5,000–20,000 instances).
+
+### Data Processing 
+Raw data is user-generated and inconsistent, so pre-processing was applied to improve model performance. Ratings were mapped to three classes—negative, neutral, positive—to simplify classification. Text processing included: Replacing contractions, Tokenisation, Partial stop-word removal, Lemmatisation and stemming.
+
+These steps reduce noise while preserving semantic meaning, supporting better feature extraction and model learning.
 
 | **Process** | **Description**    | **Example**    |
 | :---   | :--- | :--- |
@@ -62,3 +70,15 @@ This setup enables a fair comparison of the two modelling approaches and support
 | **Partial stop-words removal** | This process involves removing stop words such as "the", "of", "and", "a", "to", and "in", but keeping stop words such as “not” and “but”.  | ['Fast', 'machine', ',', 'another', 'apple', 'con', '.', 'Costs', 'fortune', '.', 'buy', 'apps', ',', 'freely', 'ones', 'iPhone', '.', 'never', 'boaught', 'iphone', '.', 'phone', 'free', '.', 'Far', 'expensive', '!', 'return', 'ASAP', '.']   |
 | **Lemmatisation** | Lemmatisation converts words to their base or root form (lemma)  | ['Fast', 'machine', ',', 'another', 'apple', 'con', '.', 'cost', 'fortune', '.', 'buy', 'apps', ',', 'freely', 'one', 'iPhone', '.', 'never', 'boaught', 'iPhone', '.', 'phone', 'free', '.', 'Far', 'expensive', '!', 'return', 'ASAP', '.']   |
 | **Stemming** | Stemming involves truncating suffixes to convert words into their root form.  | ['Fast', 'machin', ',', 'anoth', 'appl', 'con', '.', 'cost', 'fortun', '.', 'buy', 'app', ',', 'free', 'one', 'iPhone', '.', 'never', 'boaught', 'iPhone', '.', 'phone', 'free', '.', 'Far', 'expens', '!', 'return', 'ASAP', '.']   |
+
+### Feature Extraction
+
+Feature extraction transforms text into numeric representations for the models. Techniques like TF-IDF, Bag-of-Words (BoW), N-grams, or word embeddings are common. For this project, BoW was used to avoid introducing biases across classifiers, while keeping the preprocessing consistent.
+
+### Classification Models
+
+To fairly evaluate both approaches, we selected two probabilistic classifiers (Naive Bayes, Logistic Regression) and two non-probabilistic classifiers (Random Forest, SVM). These were chosen based on their strong performance in prior research, prevalence in sentiment analysis tasks, and compatibility with reviews-based datasets.
+
+### Model Evaluation
+
+Models were assessed using accuracy, precision, recall, F1-score, and confusion matrices. Additional validation included cross-validation and testing on unseen or external data to ensure robust comparisons. This framework allows conclusions about the effectiveness of probabilistic vs. non-probabilistic approaches in AI-driven sentiment analysis.
