@@ -47,6 +47,8 @@ Hybrid approaches may also combine these methods to enhance performance.
 
 This project specifically compares probabilistic classifiers (e.g. Naïve Bayes, Logistic Regression) with non-probabilistic classifiers (e.g. SVM, Random Forest), examining how each approach manages uncertainty and noise. Performance is evaluated using standard metrics, including accuracy, precision, recall, and the F1-score.
 
+---
+
 ## Key Considerations
 
 - Dataset: The dataset should be lexically rich, readily accessible, and appropriately pre-processed to support accurate sentiment detection while minimising domain bias.
@@ -58,7 +60,7 @@ This project specifically compares probabilistic classifiers (e.g. Naïve Bayes,
 - Evaluation: Data is divided into training and test sets, with cross-validation and testing on unseen data employed to ensure robust and unbiased results.
 
 
-
+---
 ## Design & Workflow
 The workflow follows key steps:  
 Data Collection ⮕ Data Processing ⮕ Feature Extraction ⮕ Model Training ⮕ Model Evaluation. 
@@ -105,7 +107,10 @@ Model assessment employs multiple metrics, including accuracy, precision, recall
 Working with real user-generated data requires strict adherence to privacy, data protection, and ethical standards. In the United Kingdom, the Data Protection Act 2018 (which incorporates the GDPR) sets out key requirements: data must be collected lawfully and transparently, used only for explicit purposes, stored securely, and retained no longer than necessary.
 
 For this project, only essential data—textual reviews and associated ratings—was collected, with no personal identifiers stored. All data was kept securely on external storage and deleted upon completion of the research. The implementation also complied with the Terms of Service of each data source, ensuring that all methods of data collection remained both lawful and ethical.
-## How I implemented it 
+
+--- 
+
+## Implementation 
 
 ### Software and Hardware Environment
 The sentiment analysis pipeline was implemented using Jupyter Notebook in a Python environment. The following hardware configuration supported the development and testing process:
@@ -118,7 +123,7 @@ The sentiment analysis pipeline was implemented using Jupyter Notebook in a Pyth
 | OS | MacOS Sonoma |
 | Storage | 500 GB |
 
----
+
 
 ### Data Collection
 Data collection focused on Google Maps reviews, which provide paired text input and rating outputs ideal for sentiment classification. The dataset encompasses diverse domains including hospitals, cinemas, airports, and pubs, totaling approximately 8,000 reviews.
@@ -130,7 +135,7 @@ The dataset was strategically divided into:
 
 All data processing was carried out using Pandas for efficient handling and manipulation of CSV files.
 
----
+
 
 ### Data Processing
 Ratings were converted from a 5-point scale to a 3-point sentiment scale:
@@ -149,12 +154,10 @@ Text processing included:
 
 These steps were implemented using **Contractions** and **NLTK**, with functions applied sequentially to preserve effectiveness. Stop-word removal was customised to retain polarity-relevant words like “not” and "never".
 
----
 
 ### Feature Extraction
 The project employed the Bag-of-Words (BoW) approach using scikit-learn’s CountVectorizer() to convert processed text into numerical feature vectors suitable for machine learning classification.
 
----
 
 ### Classification Models
 Four supervised learning classifiers were applied:  
@@ -164,7 +167,6 @@ Four supervised learning classifiers were applied:
 
 Minimal hyperparameter optimisation was conducted to obtain baseline performance estimates suitable for comparative analysis.
 
----
 
 ### Model Evaluation
 Models were evaluated using:  
@@ -176,6 +178,7 @@ Models were evaluated using:
 
 This methodology ensures a fair comparison of probabilistic and non-probabilistic classifiers for AI-driven sentiment analysis.
 
+---
 # Results & Discussion
 
 The primary objective of this project was to compare the performance of probabilistic and non-probabilistic algorithms for sentiment analysis tasks. The implemented pipeline, informed by best practice identified through the literature review, demonstrated strong performance on the selected dataset, thereby validating the effectiveness of the chosen approach.
