@@ -1,7 +1,7 @@
 # Sentiment-analysis-machine-learning-model
 
 ## Overview
-This project explored sentiment analysis, which detects the emotional tone of text to better understand users. While widely researched, there is still room to assess how different machine-learning approaches perform.
+My project explored sentiment analysis, which detects the emotional tone of text to better understand users. While sentiment analysis is widely researched, I undertook this project to introduce myself to machine learning and to evaluate the performance of different approaches.
 
 I built a sentiment-analysis pipeline to compare supervised probabilistic and non-probabilistic classifiers, applying established methods and best practices. The goal was to evaluate model performance and highlight insights that could inform future AI-driven text analytics.
 
