@@ -1,76 +1,82 @@
 # Sentiment-analysis-machine-learning-model
 
 ## Overview
-My project explored sentiment analysis, which detects the emotional tone of text to better understand users. While sentiment analysis is widely researched, I undertook this project to introduce myself to machine learning and to evaluate the performance of different approaches.
+This project explores sentiment analysis, a technique that detects the emotional tone of text to better understand user opinions. While sentiment analysis is widely researched, this project serves as an introduction to machine learning and evaluates the performance of different classification approaches.
 
-I built a sentiment-analysis pipeline to compare supervised probabilistic and non-probabilistic classifiers, applying established methods and best practices. The goal was to evaluate model performance and highlight insights that could inform future AI-driven text analytics.
+The project implements a comprehensive sentiment analysis pipeline to compare supervised probabilistic and non-probabilistic classifiers, applying established methods and best practices. The primary goal is to evaluate model performance and highlight insights that could inform future AI-driven text analytics applications.
 
 ![Screenshot](/assets/Images/MLAINLP.png)
 
 
-## My Research 
-This project evaluates and compares supervised learning classifiers for sentiment analysis—a core area of natural language processing and AI. Drawing on academic and online sources, the review looks at how machine learning methods are applied to text data, focusing on supervised algorithms for classifying sentiment while noting the broader ethical and professional context.
+## Research Context
+This project evaluates and compares supervised learning classifiers for sentiment analysis—a core area of natural language processing and AI. Drawing on academic and online sources, the project examines how machine learning methods are applied to text data, focusing on supervised algorithms for classifying sentiment within the broader ethical and professional context.
 
-### Sentiment Analysis
 
-Social platforms generate huge amounts of unstructured text that reveal user opinions and emotions. Sentiment analysis, or opinion mining, detects the polarity of this text—positive, negative, or neutral—and can also be extended to finer scales or combined with emotion detection for richer insight.
+### What is Sentiment Analysis?
+
+Social platforms generate vast amounts of unstructured text that reveal user opinions and emotions. Sentiment analysis, also known as opinion mining, detects the polarity of this text (positive, negative, or neutral) and can be extended to finer scales or combined with emotion detection for deeper insights.
 
 ![Screenshot](/assets/Images/SSpectrum.png)
 
-Key steps include:
+The sentiment analysis process involves several key steps:
 
-- Data sourcing: from social media, forums, or benchmark datasets such as SST or SemEval.
+- Data sourcing: Collecting text from social media, forums, or benchmark datasets such as Stanford Sentiment Treebank (SST) or SemEval
 
-- Text processing: cleaning and normalising text (tokenising, lemmatising, removing noise) to improve model accuracy.
+- Text processing: Cleaning and normalizing text through tokenization, lemmatization, and noise removal to improve model accuracy
 
-- Feature extraction: using methods like Bag-of-Words, TF-IDF, and N-grams to turn text into usable numeric features.
-
-
+- Feature extraction: Converting text into numerical representations using methods like Bag-of-Words, TF-IDF, and N-grams
 
 
-### Modelling Approaches
 
-Three main strategies are common:
 
-- Lexicon-based: simple and dictionary-driven but less automated.
+### Common Modelling Approaches
 
-- Machine learning: uses labelled data with algorithms such as Naive Bayes, Logistic Regression, SVMs, or Random Forests.
+Three main strategies are commonly employed in sentiment analysis:
 
-- Deep learning: neural networks (CNNs, RNNs) that learn complex patterns automatically and often deliver the best accuracy.
+- Lexicon-based: Simple and dictionary-driven but less automated and adaptable
 
-Hybrid methods can combine these for improved results.
+- Machine learning: Utilize labeled data with algorithms such as Naive Bayes, Logistic Regression, Support Vector Machines, or Random Forests
+
+- Deep learning: Employ neural networks (CNNs, RNNs, Transformers) that automatically learn complex patterns and often achieve superior accuracy
+
+Hybrid methods can combine these approaches for enhanced performance.
 
 
 ![Screenshot](/assets/Images/SAMDLpipelines.png)
 
 
-### Supervised Learning Focus
+### Project Focus
 
-This project compares probabilistic (e.g. Naive Bayes, Logistic Regression) and non-probabilistic (e.g. SVM, Random Forest) classifiers, highlighting how each handles uncertainty and noise. Performance is assessed with standard metrics such as accuracy, precision, recall, and F1 score.
+This project specifically compares probabilistic (e.g., Naive Bayes, Logistic Regression) and non-probabilistic (e.g., SVM, Random Forest) classifiers, examining how each approach handles uncertainty and noise. Performance is assessed using standard metrics including accuracy, precision, recall, and F1-score.
 
-## What is requred 
+## Key Considerations
 
-To compare probabilistic and non-probabilistic machine-learning approaches for sentiment analysis, I built a system that applies both types of classifiers using established sentiment-analysis methods.
+- Dataset: The dataset must be lexically rich, accessible, and appropriately preprocessed to support accurate sentiment detection while avoiding domain bias
 
-Key considerations:
+- Feature extraction: Various techniques including TF-IDF, Bag-of-Words, N-grams, and word embeddings are evaluated both individually and in combination to assess their impact on model performance
 
-- Dataset: must be rich in lexicon, accessible, and pre-processed to support accurate sentiment detection and avoid domain bias.
+- Model selection: Probabilistic and non-probabilistic algorithms are chosen based on reported accuracy, data characteristics, interpretability, and reliability
 
-- Feature extraction: techniques such as TF-IDF, Bag-of-Words, N-grams, or word embeddings are evaluated—individually and in combination—to see how they influence model performance.
+- Evaluation: Data is split into training and test sets, with cross-validation and testing on unseen data to ensure robust, unbiased results
 
-- Model selection: probabilistic and non-probabilistic algorithms are chosen not just for reported accuracy but also for data characteristics, interpretability, and reliability.
 
-- Evaluation: data are split into training and test sets, with cross-validation and tests on unseen data to ensure robust, unbiased results.
 
-This setup enables a fair comparison of the two modelling approaches and supports meaningful conclusions about their effectiveness in AI-driven sentiment analysis.
+## Design & Workflow
+The workflow follows key steps:  
+data collection ⮕ data processing ⮕ feature extraction ⮕ model training ⮕ evaluation. 
 
-## My Design 
-The workflow follows key steps: data collection, data processing, feature extraction, model training, and evaluation. The goal is to identify which classifiers perform best for text-based sentiment classification.
-
-I selected a dataset with textual reviews linked to ratings, providing both input (text) and discrete output (sentiment label). Reviews were chosen for their richness in emotional cues and diversity, helping reduce domain dependence while maintaining enough examples for training (5,000–20,000 instances).
+### Data Collection 
+The project utilizes a dataset containing textual reviews paired with numerical ratings, providing both input (text) and discrete output (sentiment labels). Reviews were selected for their emotional richness and contest diversity, helping reduce domain dependence while maintaining sufficient examples for training (5,000–20,000 instances).
 
 ### Data Processing 
-Raw data is user-generated and inconsistent, so pre-processing was applied to improve model performance. Ratings were mapped to three classes—negative, neutral, positive—to simplify classification. Text processing included: Replacing contractions, Tokenisation, Partial stop-word removal, Lemmatisation and stemming.
+Raw user-generated data exhibits inherent inconsistency, necessitating comprehensive pre-processing to optimize model performance. The rating scale was simplified from five points to three sentiment classes—negative, neutral, and positive—to streamline classification tasks.
+
+The text processing pipeline includes sequential application of:
+- Contraction replacement and standardization
+- Tokenization into individual word units
+- Selective stop-word removal (retaining sentiment-relevant terms)
+- Lemmatization and stemming for root word extraction
+- Case normalization
 
 These steps reduce noise while preserving semantic meaning, supporting better feature extraction and model learning.
 
@@ -84,32 +90,28 @@ These steps reduce noise while preserving semantic meaning, supporting better fe
 
 ### Feature Extraction
 
-Feature extraction transforms text into numeric representations for the models. Techniques like TF-IDF, Bag-of-Words (BoW), N-grams, or word embeddings are common. For this project, BoW was used to avoid introducing biases across classifiers, while keeping the preprocessing consistent.
+Feature extraction transforms processed text into numeric representations suitable for machine learning algorithms. Common techniques include TF-IDF, Bag-of-Words (BoW), N-grams, and word embeddings. This project employs Bag-of-Words to maintain consistency across classifiers while avoiding algorithm-specific biases.
 
-### Classification Models
+### Classification Models Selection
 
-To fairly evaluate both approaches, we selected two probabilistic classifiers (Naive Bayes, Logistic Regression) and two non-probabilistic classifiers (Random Forest, SVM). These were chosen based on their strong performance in prior research, prevalence in sentiment analysis tasks, and compatibility with reviews-based datasets.
+To ensure fair evaluation across both approaches, the project implements two probabilistic classifiers (Multinomial Naive Bayes, Logistic Regression) and two non-probabilistic classifiers (Random Forest, Support Vector Machine). These algorithms were selected based on their demonstrated performance in prior research, prevalence in sentiment analysis applications, and compatibility with review-based datasets.
 
 ### Model Evaluation
 
-Models were assessed using accuracy, precision, recall, F1-score, and confusion matrices. Additional validation included cross-validation and testing on unseen or external data to ensure robust comparisons. This framework allows conclusions about the effectiveness of probabilistic vs. non-probabilistic approaches in AI-driven sentiment analysis.
+Model assessment employs multiple metrics including accuracy, precision, recall, F1-score, and confusion matrices. Additional validation techniques include cross-validation and testing on unseen external datasets to ensure robust performance comparisons. This comprehensive framework enables meaningful conclusions about the relative effectiveness of probabilistic versus non-probabilistic approaches in AI-driven sentiment analysis.
 
 ![Screenshot](/assets/Images/SApipeline.png)
 
 ### Privacy and Ethical Considerations
 
-Working with real user data requires strict attention to privacy, data protection, and ethics. In the UK, the Data Protection Act 2018 (which implements GDPR) sets key rules: data must be collected lawfully and transparently, used only for explicit purposes, stored securely, and kept no longer than necessary.
+Working with real user-generated data requires strict adherence to privacy, data protection, and ethical guidelines. In the UK, the Data Protection Act 2018 (implementing GDPR) establishes key requirements: data must be collected lawfully and transparently, used only for explicit purposes, stored securely, and retained no longer than necessary.
 
-For this project, only the essential data—text reviews and ratings—was collected. No personal identifiers were stored, and all data was held securely on an external drive and deleted after the research concluded.
-
-We also respected each data source’s Terms of Service. For example, platforms like Facebook prohibit automated scraping without permission. All data gathering methods followed these requirements to ensure the project remained compliant and ethical.
+This project collected only essential data—text reviews and associated ratings—without storing personal identifiers. All data was maintained securely on external storage and deleted upon research completion. The implementation also respected each data source's Terms of Service, ensuring all data gathering methods remained compliant and ethical.
 
 ## How I implemented it 
 
-### Software and Hardware
-The sentiment analysis pipeline was implemented in **Jupyter Notebook**. We recommend using a similar environment to run the notebook and CSV files.
-
-**Hardware used:**  
+### Software and Hardware Environment
+The sentiment analysis pipeline was implemented using Jupyter Notebook in a Python environment. The following hardware configuration supported the development and testing process:
 
 | Component | Specification |
 | --- | --- |
@@ -122,12 +124,14 @@ The sentiment analysis pipeline was implemented in **Jupyter Notebook**. We reco
 ---
 
 ### Data Collection
-Data was collected from **Google Maps reviews**, which provide text (input) and ratings (output) for sentiment classification. Reviews covered diverse domains, such as hospitals, cinemas, airports, and pubs, with a total of ~8,000 reviews. The dataset was split into:
+Data collection focused on Google Maps reviews, which provide paired text input and rating outputs ideal for sentiment classification. The dataset encompasses diverse domains including hospitals, cinemas, airports, and pubs, totaling approximately 8,000 reviews.
+
+The dataset was strategically divided into:
 
 * **Training & testing set** – to train models and evaluate performance  
 * **Unseen dataset** – to test model generalisation  
 
-CSV files were processed using **Pandas**.
+All data processing utilized Pandas for efficient CSV file handling and manipulation.
 
 ---
 
@@ -146,12 +150,12 @@ Text processing included:
 * Lemmatisation and stemming  
 * Lowercasing  
 
-These steps were implemented using **Contractions** and **NLTK**, with functions applied sequentially to preserve effectiveness. Stop-word removal was customised to retain polarity-relevant words like “not”.
+These steps were implemented using **Contractions** and **NLTK**, with functions applied sequentially to preserve effectiveness. Stop-word removal was customised to retain polarity-relevant words like “not” and "never".
 
 ---
 
 ### Feature Extraction
-We used **Bag-of-Words (BoW)** via `CountVectorizer()` from Scikit-learn to convert text into numerical features for classification.
+The project implemented Bag-of-Words (BoW) using Scikit-learn's CountVectorizer() to convert processed text into numerical feature vectors suitable for machine learning classification.
 
 ---
 
@@ -161,7 +165,7 @@ Four supervised learning classifiers were applied:
 * **Probabilistic:** Multinomial Naïve Bayes, Logistic Regression  
 * **Non-probabilistic:** Random Forest, Support Vector Machine  
 
-Minimal optimisation was applied to obtain general performance estimates for comparison.
+Minimal hyperparameter optimization was applied to obtain baseline performance estimates suitable for comparative analysis.
 
 ---
 
@@ -171,21 +175,21 @@ Models were evaluated using:
 * **Metrics:** Accuracy, Precision, Recall, F1-score  
 * **Visualisation:** Confusion matrices  
 * **Validation:** 4:1 train-test split and 5-fold **StratifiedKFold** cross-validation to handle class imbalance  
-* **Unseen data testing:** to assess generalisation  
+* **Generalization Testing:** Performance assessment on completely unseen datasets
 
 This methodology ensures a fair comparison of probabilistic and non-probabilistic classifiers for AI-driven sentiment analysis.
 
 # Results & Discussion
 
-The main goal of this project was to compare the performance of probabilistic and non-probabilistic algorithms for sentiment analysis. We built a sentiment analysis pipeline using best practices identified from our literature review. Overall, the pipeline performed well on the chosen dataset, suggesting that our implementation was effective.
+The primary objective of this project was comparing the performance of probabilistic and non-probabilistic algorithms for sentiment analysis tasks. The implemented pipeline, based on best practices identified through literature review, demonstrated strong performance on the selected dataset, validating the effectiveness of the chosen approach.
 
 ## Challenges
 
-One of the main challenges was **data collection**. We observed an uneven distribution of sentiment classes, particularly a low number of neutral reviews. This likely reflects both the structure of the 5-star rating scale and user behaviour—people are more likely to leave strongly positive or negative reviews than neutral ones. This imbalance created additional complexity when training the models.
+Data Collection and Class Distribution: The most significant challenge involved managing uneven sentiment class distribution, particularly the scarcity of neutral reviews. This imbalance likely reflects both the inherent structure of 5-star rating systems and typical user behavior—users tend to leave strongly positive or negative reviews rather than neutral assessments. This class imbalance introduced additional complexity during model training and evaluation phases.
 
 ## Outcomes
 
-We evaluated the classifiers using both **seen** and **unseen** data, generating metrics such as accuracy, precision, recall, and F1-score. We also applied **k-fold cross-validation** for a more robust assessment.
+The evaluation process assessed all classifiers using both seen and unseen datasets, generating comprehensive metrics including accuracy, precision, recall, and F1-scores. K-fold cross-validation provided additional robustness to the performance assessment.
 
 **Seen data accuracy scores:**  
 - Naïve Bayes: 88%  
