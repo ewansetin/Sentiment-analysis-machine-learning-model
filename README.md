@@ -179,15 +179,15 @@ Models were evaluated using:
 This methodology ensures a fair comparison of probabilistic and non-probabilistic classifiers for AI-driven sentiment analysis.
 
 ---
-# Results & Discussion
+## Results & Discussion
 
 The primary objective of this project was to compare the performance of probabilistic and non-probabilistic algorithms for sentiment analysis tasks. The implemented pipeline, informed by best practice identified through the literature review, demonstrated strong performance on the selected dataset, thereby validating the effectiveness of the chosen approach.
 
-## Challenges
+### Challenges
 
 Data Collection and Class Distribution:The most significant challenge lay in managing uneven sentiment class distribution, particularly the scarcity of neutral reviews. This imbalance likely reflects both the inherent structure of five-star rating systems and typical user behaviour, as individuals are more inclined to leave strongly positive or negative reviews than neutral assessments. Such imbalance introduced additional complexity during both model training and evaluation.
 
-## Outcomes
+### Outcomes
 
 The evaluation process assessed all classifiers on both seen and unseen datasets, generating comprehensive metrics such as accuracy, precision, recall, and the F1-score. K-fold cross-validation was employed to provide additional robustness to the performance assessment.
 
@@ -209,6 +209,7 @@ When evaluated on unseen data, probabilistic classifiers exhibited a notable dec
 
 **Conclusion:** Both probabilistic and non-probabilistic algorithms are valid for sentiment analysis, but non-probabilistic models may be preferable for datasets with uneven class distributions.
 
+---
 
 ## Room for Improvement
 
